@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #4f46e5, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-button {
+  @apply bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-bold py-3 px-6 rounded-lg border border-blue-400/30 shadow-lg shadow-blue-600/30 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer;
+}
+
+.gradient-button:hover {
+  @apply from-blue-700 to-indigo-800 shadow-lg shadow-blue-600/40;
+}
+
+.feature-card {
+  @apply bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 transition-all duration-300 shadow-sm hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/10 flex flex-col justify-between;
+}
+
+.market-card {
+  @apply bg-white border border-slate-200 rounded-3xl p-6 transition-all duration-300 shadow-sm hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/10;
+}
+
+.testimonial-card {
+  @apply bg-white border border-slate-200 rounded-3xl p-8 transition-all duration-300 shadow-sm hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/10 flex flex-col justify-between;
+}
+
+.badge {
+  @apply inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-bold border border-blue-200;
+}
+
+.badge.hot {
+  @apply bg-amber-100 text-amber-800 border-amber-200;
+}
+
+.pulse-dot {
+  @apply w-3 h-3 bg-blue-600 rounded-full animate-pulse;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-black text-slate-900 tracking-tight;
+}
+
+.header-sticky {
+  @apply sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-blue-100;
+}
+
+.compliance-bar {
+  @apply bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 text-blue-200 border-b border-blue-800/40 text-xs py-3 px-4;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    @apply text-3xl;
+  }
+}
